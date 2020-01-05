@@ -1,0 +1,13 @@
+ARG BASE_VERSION=latest
+FROM node:${BASE_VERSION}
+
+ARG GATSBY_VERSION=latest
+ARG GATSBY_IMAGE_VERSION=latest
+ARG GATSBY_PLUGIN_SHARP_VERSION=latest
+ARG GATSBY_TRANSFORMER_SHARP_VERSION=latest
+
+RUN npm install --unsafe-perm -g \
+  gatsby@${GATSBY_VERSION} \
+  gatsby-image@${GATSBY_IMAGE_VERSION} \
+  gatsby-plugin-sharp@${GATSBY_PLUGIN_SHARP_VERSION} \
+  gatsby-transformer-sharp@${GATSBY_TRANSFORMER_SHARP_VERSION}
